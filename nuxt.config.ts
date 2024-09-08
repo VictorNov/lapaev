@@ -23,6 +23,7 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/image'
   ],
+  sourcemap: false,
   vuetify: {
     vuetifyOptions: {
       icons: {
