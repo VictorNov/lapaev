@@ -1,0 +1,19 @@
+{
+  "extends": [
+    "stylelint-config-rational-order-fix",
+    "stylelint-config-standard-scss",
+    "stylelint-config-recommended-vue/scss"
+  ],
+  "rules": {
+    "selector-class-pattern": null,
+    "no-empty-source": null,
+    "color-function-notation": ["modern", { "ignore": ["with-var-inside"] }],
+    "media-feature-range-notation": "prefix"
+  },
+  "ignoreFiles": [
+    "node_modules/**/*",
+    "dist/**/*",
+    "public/**/*",
+    "src/assets/styles/variables/**/*"
+  ]
+}
