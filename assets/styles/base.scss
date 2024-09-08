@@ -1,0 +1,33 @@
+@import "variables/mixins";
+
+:root {
+  font-size: 16px;
+  font-family: var(--base-font-family), sans-serif;
+  scroll-behavior: smooth;
+}
+
+img {
+  display: block;
+}
+
+h1 {
+  font: var(--display-md);
+  font-weight: var(--semibold);
+  text-wrap: balance;
+
+  @include display-md {
+    font: var(--display-xl);
+    font-weight: var(--semibold);
+  }
+}
+
+h2 {
+  font: var(--display-sm);
+  font-weight: var(--semibold);
+  text-wrap: balance;
+
+  @include display-md {
+    font: var(--display-md);
+    font-weight: var(--semibold);
+  }
+}

@@ -1,0 +1,15 @@
+/*
+  This file is used to change some vuetify settings.
+  And you can override sass variables from the Vuetify framework.
+  For more information, please visit the Vuetify documentation.
+  https://vuetifyjs.com/en/features/sass-variables
+*/
+
+@forward 'vuetify/settings' with (
+  $utilities: false, // Enables/disables the utility classes.
+  $color-pack: false, // Enables/disables the color pack.
+
+  // Button
+  $button-font-weight: var(--semibold),
+  $button-text-transform: none,
+);

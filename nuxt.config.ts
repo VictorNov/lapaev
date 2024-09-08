@@ -1,6 +1,14 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import { dirname, join } from 'path'
+import { fileURLToPath } from 'url'
+
+const currentDir = dirname(fileURLToPath(import.meta.url))
+
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
+  css: [
+    '@/assets/styles/main.scss',
+  ],
   devtools: { enabled: true },
   fonts: {
     families: [
@@ -15,22 +23,35 @@ export default defineNuxtConfig({
     ],
   },
   modules: [
-    // 'vuetify-nuxt-module',
+    'vuetify-nuxt-module',
     '@nuxt/eslint',
     '@nuxtjs/stylelint-module',
     '@nuxt/fonts',
-    '@nuxthq/studio',
-    '@nuxt/content',
-    '@nuxt/image'
+    '@nuxt/image',
+    'nuxt-icons',
   ],
+  stylelint: {
+    fix: true,
+    include: [
+      join(currentDir, './pages/**/*.{vue,css,scss}'),
+      join(currentDir, './components/**/*.{vue,css,scss}'),
+    ],
+  },
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: `
+            @use "~/assets/styles/variables/_mixins.scss" as *;
+            @use "~/assets/styles/variables/_variables.scss" as *;
+          `,
+        },
+      },
+    },
+  },
   // vuetify: {
-  //   vuetifyOptions: {
-  //     icons: {
-  //       defaultSet: 'mdi-svg',
-  //     },
-  //     theme: {
-  //       defaultTheme: 'dark',
-  //     }
-  //   }
-  // }
+  //   moduleOptions: {
+  //     styles: { configFile: join(currentDir, './assets/styles/vuetify.scss') },
+  //   },
+  // },
 })

@@ -1,0 +1,55 @@
+// All scss mixins should be placed here. This file is imported into the main.scss file.
+
+// ------------------------- Breakpoints -------------------------
+
+// adapted for material-design and vuetify https://material.io/design/layout/responsive-layout-grid.html
+
+@mixin display-xs-only {
+  @media screen and (max-width: 599px) {
+    @content;
+  }
+}
+
+@mixin display-sm {
+  @media screen and (min-width: 600px) {
+    @content;
+  }
+}
+
+@mixin display-md {
+  @media screen and (min-width: 960px) {
+    @content;
+  }
+}
+
+@mixin display-lg {
+  @media screen and (min-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin display-xl {
+  @media screen and (min-width: 1920px) {
+    @content;
+  }
+}
+
+@mixin display-xxl {
+  @media screen and (min-width: 2560px) {
+    @content;
+  }
+}
+
+// ------------------------- Layout -------------------------
+
+@mixin container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--container-padding-mobile);
+
+  @include display-md {
+    max-width: var(--container-max-width-desktop);
+    padding: 0 var(--container-padding-desktop);
+  }
+}
