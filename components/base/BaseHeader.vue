@@ -35,7 +35,8 @@ const isMenuOpen = ref(false)
       elevation="0"
     >
       <BaseSection class="base-header">
-        <BaseLogo :size="250" />
+        <BaseLogo class="logo-desktop" :size="250" />
+        <BaseLogo class="logo-mobile" :size="200" />
 
         <nav class="base-header__navigation">
           <NuxtLink
@@ -94,6 +95,22 @@ const isMenuOpen = ref(false)
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  .logo-desktop {
+    display: none;
+
+    @include display-md {
+      display: block;
+    }
+  }
+
+  .logo-mobile {
+    display: block;
+
+    @include display-md {
+      display: none;
+    }
+  }
 
   .base-header__navigation {
     display: none;
