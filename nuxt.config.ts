@@ -5,6 +5,19 @@ import { fileURLToPath } from 'url'
 const currentDir = dirname(fileURLToPath(import.meta.url))
 
 export default defineNuxtConfig({
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: 'ru',
+      },
+      titleTemplate: '%s',
+      meta: [
+        { name: 'theme-color', content: '#424650' },
+      ],
+    },
+    pageTransition: { name: 'page', mode: 'out-in' },
+    layoutTransition: { name: 'page', mode: 'out-in' },
+  },
   compatibilityDate: '2024-04-03',
   css: [
     '@/assets/styles/main.scss',
