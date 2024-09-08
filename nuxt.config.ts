@@ -19,7 +19,7 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxtjs/stylelint-module',
     '@nuxt/fonts',
-    '@nuxthq/studio',
+    // '@nuxthq/studio',
     '@nuxt/content',
     '@nuxt/image'
   ],
