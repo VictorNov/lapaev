@@ -39,7 +39,7 @@
     / 1fr auto;
   height: calc(100vh - 80px - var(--spacing-8xl));
   margin: var(--spacing-5xl) auto;
-  padding: var(--spacing-3xl);
+  padding: var(--spacing-5xl);
   color: rgb(var(--v-theme-surface));
   background: rgb(var(--v-theme-on-surface));
 
@@ -72,7 +72,12 @@
     flex-direction: column;
     grid-area: content;
     gap: var(--spacing-2xl);
+    align-items: end;
     justify-content: center;
+
+    @include display-xs-only {
+      align-items: start;
+    }
   }
 
   &__title {
