@@ -19,8 +19,9 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxtjs/stylelint-module',
     '@nuxt/fonts',
+    '@nuxthq/studio',
     '@nuxt/content',
-    // '@nuxthq/studio'
+    '@nuxt/image'
   ],
   vuetify: {
     vuetifyOptions: {
