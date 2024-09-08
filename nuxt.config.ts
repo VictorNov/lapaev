@@ -15,23 +15,22 @@ export default defineNuxtConfig({
     ],
   },
   modules: [
-    'vuetify-nuxt-module',
+    // 'vuetify-nuxt-module',
     '@nuxt/eslint',
     '@nuxtjs/stylelint-module',
     '@nuxt/fonts',
-    // '@nuxthq/studio',
+    '@nuxthq/studio',
     '@nuxt/content',
     '@nuxt/image'
   ],
-  sourcemap: false,
-  vuetify: {
-    vuetifyOptions: {
-      icons: {
-        defaultSet: 'mdi-svg',
-      },
-      theme: {
-        defaultTheme: 'dark',
-      }
-    }
-  }
+  // vuetify: {
+  //   vuetifyOptions: {
+  //     icons: {
+  //       defaultSet: 'mdi-svg',
+  //     },
+  //     theme: {
+  //       defaultTheme: 'dark',
+  //     }
+  //   }
+  // }
 })
