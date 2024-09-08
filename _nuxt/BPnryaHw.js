@@ -1,0 +1,1 @@
+import{_ as a}from"./CBHKDK2p.js";import{a as o,f as n,A as f,w as s,a7 as u}from"./CGv18bRu.js";const l=o({__name:"ProseA",props:{href:{type:String,default:""},target:{type:String,default:void 0,required:!1}},setup(e){return(t,_)=>{const r=a;return n(),f(r,{href:e.href,target:e.target},{default:s(()=>[u(t.$slots,"default")]),_:3},8,["href","target"])}}});export{l as default};

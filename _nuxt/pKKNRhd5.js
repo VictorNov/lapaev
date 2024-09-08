@@ -1,0 +1,1 @@
+import{m as r,A as p,a3 as o,f as l,w as t,k as e,a7 as f}from"./CGv18bRu.js";const m={};function d(n,u){const a=o("v-app-bar"),_=o("v-main"),c=o("v-footer"),s=o("v-app");return l(),p(s,null,{default:t(()=>[e(a),e(_,null,{default:t(()=>[f(n.$slots,"default")]),_:3}),e(c)]),_:3})}const i=r(m,[["render",d]]);export{i as default};
