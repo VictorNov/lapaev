@@ -20,7 +20,7 @@ export default defineNuxtConfig({
     '@nuxtjs/stylelint-module',
     '@nuxt/fonts',
     '@nuxt/content',
-    '@nuxthq/studio'
+    // '@nuxthq/studio'
   ],
   vuetify: {
     vuetifyOptions: {
