@@ -4,7 +4,22 @@
 
 <template>
   <BaseSection class="hero-section">
-    <div class="hero-section__bg" />
+    <picture>
+      <source
+        srcset="/assets/images/hero-m.webp, /assets/images/hero-m@2x.webp 2x"
+        media="(max-width: 600px)"
+      />
+      <source
+        srcset="/assets/images/hero.webp, /assets/images/hero@2x.webp 2x"
+      />
+      <img
+        class="hero-section__bg"
+        src="/assets/images/hero.webp"
+        alt="Психотерапевт Сергей Лапаев"
+        width="1200"
+        height="840"
+      />
+    </picture>
 
     <div class="hero-section__content">
       <h1 class="hero-section__title">
@@ -55,14 +70,14 @@
     position: absolute;
     z-index: 0;
     inset: 0;
-    background-image: url("@/assets/images/hero.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 
     @include display-xs-only {
-      top: var(--spacing-10xl);
-      background-position: -160px center;
+      inset: var(--spacing-10xl) 0 0;
+      height: calc(100% - var(--spacing-10xl));
+      object-position: center top;
     }
   }
 

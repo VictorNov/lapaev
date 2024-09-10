@@ -87,7 +87,7 @@ const isMenuOpen = ref(false)
 
 <style scoped lang="scss">
 .base-header__wrapper {
-  background-color: rgba(var(--v-theme-surface), 0) !important;
+  background-color: rgb(66 70 80 / 50%) !important;
   backdrop-filter: blur(20px);
 }
 
@@ -162,7 +162,7 @@ const isMenuOpen = ref(false)
 
 .mobile-menu {
   top: 0 !important;
-  background-color: rgba(var(--v-theme-surface), 0);
+  background-color: rgb(66 70 80 / 50%) !important;
   backdrop-filter: blur(20px);
 
   &.v-navigation-drawer--active {
