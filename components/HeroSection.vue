@@ -52,6 +52,7 @@
     ". content" 1fr
     ". consult" auto
     / 1fr auto;
+  gap: var(--spacing-2xl);
   height: calc(100vh - 80px - var(--spacing-8xl));
   margin: var(--spacing-5xl) auto;
   padding: var(--spacing-5xl) var(--spacing-8xl);
