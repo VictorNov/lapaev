@@ -17,13 +17,14 @@
 <style scoped lang="scss">
 .main-content {
   &__bg {
-    position: absolute;
+    position: fixed;
+    height: 100lvh;
+    inset: 0;
     background-image: url("@/assets/images/bg-2.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
-    inset: 0;
 
     &::before {
       position: absolute;
