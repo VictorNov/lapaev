@@ -52,11 +52,20 @@
     ". content" 1fr
     ". consult" auto
     / 1fr auto;
-  height: calc(100vh - 80px - var(--spacing-8xl));
+  min-height: calc(100vh - 80px - var(--spacing-8xl));
   margin: var(--spacing-5xl) auto;
-  padding: var(--spacing-5xl);
+  padding: var(--spacing-5xl) var(--spacing-8xl);
   color: rgb(var(--v-theme-surface));
   background: rgb(var(--v-theme-on-surface));
+
+  @media screen and (orientation: portrait) {
+    grid-template:
+      "content" auto
+      "consult" 1fr
+      / 1fr;
+    padding: var(--spacing-2xl) var(--spacing-3xl) var(--spacing-3xl);
+    aspect-ratio: 1 / 1;
+  }
 
   @include display-xs-only {
     grid-template:
@@ -64,6 +73,7 @@
       "consult" 1fr
       / 1fr;
     padding: var(--spacing-2xl) var(--spacing-3xl) var(--spacing-3xl);
+    aspect-ratio: 8 / 15;
   }
 
   &__bg {
@@ -72,11 +82,20 @@
     inset: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    object-position: left bottom;
+
+    @media screen and (orientation: portrait) {
+      inset: var(--spacing-10xl) 0 0;
+      height: calc(100% - var(--spacing-10xl));
+      object-fit: cover;
+      object-position: center top;
+    }
 
     @include display-xs-only {
       inset: var(--spacing-10xl) 0 0;
       height: calc(100% - var(--spacing-10xl));
+      object-fit: cover;
       object-position: center top;
     }
   }
@@ -91,6 +110,10 @@
     justify-content: center;
 
     @include display-xs-only {
+      align-items: start;
+    }
+
+    @media screen and (orientation: portrait) {
       align-items: start;
     }
   }
