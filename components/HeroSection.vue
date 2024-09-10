@@ -34,7 +34,7 @@
       class="hero-section__consult"
       href="#contacts"
     >
-      Записаться на консультацию
+      Записаться на бесплатную консультацию
 
       <v-icon
         icon="fas fa-chevron-right"
@@ -76,7 +76,7 @@
       "content" auto
       "consult" 1fr
       / 1fr;
-    padding: var(--spacing-2xl) var(--spacing-3xl) var(--spacing-3xl);
+    padding: var(--spacing-2xl) var(--spacing-3xl) 0;
   }
 
   &__bg {
@@ -163,6 +163,12 @@
 
     & > .v-icon {
       margin-left: var(--spacing-md);
+    }
+
+    @include display-xs-only {
+      font: var(--text-md);
+      font-weight: var(--bold);
+      text-wrap: balance;
     }
   }
 }
