@@ -88,7 +88,6 @@ export default {
 
 .card:hover {
   box-shadow: 0 6px 10px rgb(0 0 0 / 15%);
-  transform: translateY(-10px);
 }
 
 .card h3 {
@@ -98,7 +97,7 @@ export default {
 
 .card p {
   color: rgba(var(--v-theme-on-surface), 0.8);
-  font-size: 1rem;
+  font: var(--text-lg);
 }
 
 .hover-content {
@@ -106,10 +105,19 @@ export default {
   right: 0;
   bottom: -100%;
   left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   height: 100%;
   padding: 20px;
-  background-color: rgba(var(--v-theme-surface), 0.95);
+  background-color: rgba(var(--v-theme-surface), 0.6);
+  backdrop-filter: blur(10px);
   transition: bottom 0.3s ease;
+
+  p {
+    font: var(--text-xl);
+  }
 }
 
 .card:hover .hover-content {
