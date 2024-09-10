@@ -110,7 +110,7 @@ const problems = [
   gap: 1px;
   margin-top: var(--spacing-6xl);
   padding: 0;
-  background: rgb(var(--v-theme-on-surface));
+  background: rgba(var(--v-theme-on-surface), 0.2);
 
   .title-wrapper {
     display: flex;

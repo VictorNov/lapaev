@@ -13,25 +13,12 @@ import HelpSection from '~/components/HelpSection.vue'
 
     <HelpSection />
 
-    <TextSection
-      title="Помогаю при"
-      :list="[
-        'депрессии',
-        'тревожности',
-        'одиночестве',
-        'утрате и горе',
-        'панических атаках',
-        'неуверенности в поведении',
-        'созависимых и конфликтных отношениях',
-        'испытывающим сексуальные и другие трудности',
-        'пережившим психо-эмоциональное и сексуализированное насилие',
-      ]"
-    />
+    <BlogSection />
   </div>
 </template>
 
 <style scoped lang="scss">
 .index-page {
-  min-height: 200vh;
+  padding-bottom: var(--spacing-6xl);
 }
 </style>
