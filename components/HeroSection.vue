@@ -52,7 +52,7 @@
     ". content" 1fr
     ". consult" auto
     / 1fr auto;
-  min-height: calc(100vh - 80px - var(--spacing-8xl));
+  height: calc(100vh - 80px - var(--spacing-8xl));
   margin: var(--spacing-5xl) auto;
   padding: var(--spacing-5xl) var(--spacing-8xl);
   color: rgb(var(--v-theme-surface));
@@ -67,13 +67,16 @@
     aspect-ratio: 1 / 1;
   }
 
+  @include display-md {
+    max-height: calc(var(--container-max-width-desktop) / 1.5);
+  }
+
   @include display-xs-only {
     grid-template:
       "content" auto
       "consult" 1fr
       / 1fr;
     padding: var(--spacing-2xl) var(--spacing-3xl) var(--spacing-3xl);
-    aspect-ratio: 8 / 15;
   }
 
   &__bg {
@@ -96,7 +99,7 @@
       inset: var(--spacing-10xl) 0 0;
       height: calc(100% - var(--spacing-10xl));
       object-fit: cover;
-      object-position: center top;
+      object-position: center bottom;
     }
   }
 
