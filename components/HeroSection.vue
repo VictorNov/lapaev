@@ -54,7 +54,6 @@
     / 1fr auto;
   gap: var(--spacing-2xl);
   height: calc(100vh - 80px - var(--spacing-8xl));
-  margin: var(--spacing-5xl) auto;
   padding: var(--spacing-5xl) var(--spacing-8xl);
   color: rgb(var(--v-theme-surface));
   background: rgb(var(--v-theme-on-surface));
