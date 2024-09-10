@@ -157,8 +157,10 @@
     backdrop-filter: blur(20px);
     transition: background 0.2s;
 
-    &:hover {
+    &:hover,
+    &:focus-visible {
       background: rgb(var(--v-theme-primary), 0.8);
+      outline: none;
     }
 
     & > .v-icon {

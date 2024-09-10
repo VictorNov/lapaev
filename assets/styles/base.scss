@@ -25,6 +25,7 @@ h2 {
   font: var(--display-sm);
   font-weight: var(--semibold);
   text-wrap: balance;
+  letter-spacing: 0.15rem;
 
   @include display-md {
     font: var(--display-md);
