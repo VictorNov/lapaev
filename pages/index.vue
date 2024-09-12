@@ -18,6 +18,8 @@ import CtaSection from '~/components/CtaSection.vue'
 
     <HelpSection2 />
 
+    <StepsSection />
+
     <BlogSection />
   </div>
 </template>
