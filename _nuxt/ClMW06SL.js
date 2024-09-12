@@ -1,0 +1,1 @@
+import{_ as e,c,o}from"./B5ZSswty.js";const s={},t={class:"index-page"};function a(n,_){return o(),c("div",t," Blog Page ")}const d=e(s,[["render",a],["__scopeId","data-v-1fb81cf8"]]);export{d as default};
