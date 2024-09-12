@@ -10,11 +10,11 @@ const problems = [
     shortDescription: "Кажется, что мир вокруг слишком пугает, и нет места спокойствию.",
     detailedDescription: "Мы найдем способы справиться с тревогой и научимся жить здесь и сейчас."
   },
-  {
-    title: "Одиночество",
-    shortDescription: "Когда никто не слышит и некому доверить своё сердце.",
-    detailedDescription: "Я помогу вам почувствовать связь с собой и окружающими."
-  },
+  // {
+  //   title: "Одиночество",
+  //   shortDescription: "Когда никто не слышит и некому доверить своё сердце.",
+  //   detailedDescription: "Я помогу вам почувствовать связь с собой и окружающими."
+  // },
   {
     title: "Утрата и горе",
     shortDescription: "Когда потеря кажется бесконечной, и невозможно отпустить.",
@@ -25,26 +25,26 @@ const problems = [
     shortDescription: "Неожиданные приступы страха захватывают и не отпускают.",
     detailedDescription: "Я помогу вам вернуть контроль над собой и своим телом."
   },
-  {
-    title: "Неуверенность в поведении",
-    shortDescription: "Когда сложно выразить себя и быть понятым.",
-    detailedDescription: "Я помогу вам обрести уверенность и научиться быть собой."
-  },
-  {
-    title: "Созависимые и конфликтные отношения",
-    shortDescription: "Когда отношения приносят больше боли, чем радости.",
-    detailedDescription: "Мы разберемся, как восстановить баланс и гармонию в отношениях."
-  },
-  {
-    title: "Сексуальные и другие трудности",
-    shortDescription: "Когда интимные моменты приносят тревогу, а не радость.",
-    detailedDescription: "Я помогу вам разобраться в своих желаниях и вернуть радость от близости."
-  },
-  {
-    title: "Психо-эмоциональное и сексуализированное насилие",
-    shortDescription: "Когда воспоминания о насилии всё ещё болят и не отпускают.",
-    detailedDescription: "Мы справимся с болью прошлого и начнем строить светлое будущее."
-  }
+  // {
+  //   title: "Неуверенность в поведении",
+  //   shortDescription: "Когда сложно выразить себя и быть понятым.",
+  //   detailedDescription: "Я помогу вам обрести уверенность и научиться быть собой."
+  // },
+  // {
+  //   title: "Созависимые и конфликтные отношения",
+  //   shortDescription: "Когда отношения приносят больше боли, чем радости.",
+  //   detailedDescription: "Мы разберемся, как восстановить баланс и гармонию в отношениях."
+  // },
+  // {
+  //   title: "Сексуальные и другие трудности",
+  //   shortDescription: "Когда интимные моменты приносят тревогу, а не радость.",
+  //   detailedDescription: "Я помогу вам разобраться в своих желаниях и вернуть радость от близости."
+  // },
+  // {
+  //   title: "Психо-эмоциональное и сексуализированное насилие",
+  //   shortDescription: "Когда воспоминания о насилии всё ещё болят и не отпускают.",
+  //   detailedDescription: "Мы справимся с болью прошлого и начнем строить светлое будущее."
+  // }
 ]
 </script>
 
@@ -86,20 +86,6 @@ const problems = [
         </div>
       </div>
     </div>
-
-    <div class="action-wrapper">
-      <a
-        class="action-button"
-        href="#contacts"
-      >
-        Записаться на бесплатную консультацию
-
-        <v-icon
-          icon="fas fa-chevron-right"
-          size="16"
-        />
-      </a>
-    </div>
   </BaseSection>
 </template>
 
@@ -132,7 +118,7 @@ const problems = [
     gap: 1px;
 
     @include display-md {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
     }
 
     .card {
@@ -186,49 +172,8 @@ const problems = [
 
       &:hover .hover-content {
         color: rgb(var(--v-theme-surface));
-        background: rgba(var(--v-theme-on-surface), 0.9);
+        background: rgba(var(--v-theme-on-surface), 1);
         backdrop-filter: blur(10px);
-      }
-    }
-  }
-
-  .action-wrapper {
-    display: flex;
-    justify-content: center;
-    padding: var(--spacing-4xl);
-    background: rgb(var(--v-theme-surface));
-
-    .action-button {
-      position: relative;
-      display: flex;
-      grid-area: consult;
-      align-items: center;
-      align-self: end;
-      justify-content: center;
-      padding: var(--spacing-xl) var(--spacing-2xl);
-      color: rgb(var(--v-theme-on-primary));
-      font: var(--text-lg);
-      font-weight: var(--bold);
-      text-transform: uppercase;
-      text-decoration: none;
-      background: rgb(var(--v-theme-primary), 0.6);
-      backdrop-filter: blur(20px);
-      transition: background 0.2s;
-
-      &:hover,
-      &:focus-visible {
-        background: rgb(var(--v-theme-primary), 0.8);
-        outline: none;
-      }
-
-      & > .v-icon {
-        margin-left: var(--spacing-md);
-      }
-
-      @include display-xs-only {
-        font: var(--text-md);
-        font-weight: var(--bold);
-        text-wrap: balance;
       }
     }
   }

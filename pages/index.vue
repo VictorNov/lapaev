@@ -3,6 +3,7 @@ import HeroSection from '~/components/HeroSection.vue'
 import AboutSection from '~/components/AboutSection.vue'
 import TextSection from '~/components/TextSection.vue'
 import HelpSection from '~/components/HelpSection.vue'
+import CtaSection from '~/components/CtaSection.vue'
 </script>
 
 <template>
@@ -12,6 +13,10 @@ import HelpSection from '~/components/HelpSection.vue'
     <AboutSection />
 
     <HelpSection />
+
+    <CtaSection />
+
+    <HelpSection2 />
 
     <BlogSection />
   </div>
